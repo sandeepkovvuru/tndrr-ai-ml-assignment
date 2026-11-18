@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "question": "What are the three Authenticator Assurance Levels (AALs) defined in NIST SP 800-63B?",
+    "source_page": 10,
+    "key_phrase": "Authenticator Assurance Level 1",
+    "ground_truth_passage": "AAL1 provides some assurance that the claimant controls an authenticator bound to the subscriber's account. AAL2 provides high confidence... AAL3 provides very high confidence requiring a hardware-based cryptographic authenticator."
+  },
+  {
+    "id": 2,
+    "question": "What is the minimum character length required for user-chosen memorized secrets (passwords)?",
+    "source_page": 21,
+    "key_phrase": "8 characters in length",
+    "ground_truth_passage": "Memorized secrets chosen by subscribers SHALL be at least 8 characters in length and SHOULD be at least 64 characters in length."
+  },
+  {
+    "id": 3,
+    "question": "Why does NIST SP 800-63B prohibit periodic arbitrary password expiration rules?",
+    "source_page": 22,
+    "key_phrase": "changed arbitrarily",
+    "ground_truth_passage": "Verifiers SHOULD NOT require memorized secrets to be changed arbitrarily (e.g., periodically). However, verifiers SHALL force a change if there is evidence of compromise."
+  },
+  {
+    "id": 4,
+    "question": "Which out-of-band authentication channel requires checking that the number is not VoIP?",
+    "source_page": 24,
+    "key_phrase": "VoIP",
+    "ground_truth_passage": "If the out-of-band verification is to be made using a SMS message on a public mobile telephone network, the verifier SHALL verify that the pre-registered telephone number is not a VoIP service."
+  },
+  {
+    "id": 5,
+    "question": "What cryptographic property is mandatory for AAL3 authenticators?",
+    "source_page": 13,
+    "key_phrase": "verifier impersonation resistant",
+    "ground_truth_passage": "Authentication at AAL3 SHALL use a hardware-based authenticator and an authenticator that provides verifier impersonation resistance."
+  },
+  {
+    "id": 6,
+    "question": "What is the maximum allowed lifetime for an out-of-band authentication secret?",
+    "source_page": 25,
+    "key_phrase": "at most 10 minutes",
+    "ground_truth_passage": "Out-of-band authenticators SHALL generate a secret of at least 64 bits of entropy, and the authentication secret SHALL be valid for at most 10 minutes."
+  },
+  {
+    "id": 7,
+    "question": "How must verifiers store memorized secrets at rest?",
+    "source_page": 23,
+    "key_phrase": "salted and hashed",
+    "ground_truth_passage": "Verifiers SHALL store memorized secrets in a form that is resistant to offline attacks. Memorized secrets SHALL be salted and hashed using a suitable one-way key derivation function."
+  },
+  {
+    "id": 8,
+    "question": "What minimum salt length and iteration count apply to password key derivation?",
+    "source_page": 23,
+    "key_phrase": "32 bits in length",
+    "ground_truth_passage": "The salt value SHALL be at least 32 bits in length and be chosen arbitrarily. At least 10,000 iterations of the hash function SHOULD be performed."
+  },
+  {
+    "id": 9,
+    "question": "Are composition rules requiring uppercase and symbols recommended for passwords?",
+    "source_page": 22,
+    "key_phrase": "composition rules",
+    "ground_truth_passage": "Verifiers SHOULD NOT impose other composition rules (e.g., requiring mixtures of different character types or prohibiting consecutively repeated characters) for memorized secrets."
+  },
+  {
+    "id": 10,
+    "question": "What must a verifier check newly chosen passwords against during registration?",
+    "source_page": 21,
+    "key_phrase": "commonly-used",
+    "ground_truth_passage": "Verifiers SHALL compare the prospective secrets against a list that contains values known to be commonly-used, expected, or compromised."
+  },
+  {
+    "id": 11,
+    "question": "What is the maximum number of consecutive failed authentication attempts before rate-limiting?",
+    "source_page": 27,
+    "key_phrase": "100 failed attempts",
+    "ground_truth_passage": "The verifier SHALL implement a rate-limiting mechanism that effectively limits the number of failed authentication attempts (no more than 100 failed attempts)."
+  },
+  {
+    "id": 12,
+    "question": "What periodic and inactivity reauthentication timeouts apply at AAL2?",
+    "source_page": 32,
+    "key_phrase": "30 minutes",
+    "ground_truth_passage": "At AAL2, periodic reauthentication of the subscriber SHALL take place at least once every 12 hours, and following an inactivity period of 30 minutes or more."
+  },
+  {
+    "id": 13,
+    "question": "What inactivity reauthentication timeout applies at AAL3?",
+    "source_page": 33,
+    "key_phrase": "15 minutes",
+    "ground_truth_passage": "At AAL3, periodic reauthentication of the subscriber SHALL take place at least once every 12 hours, and following an inactivity period of 15 minutes or more."
+  },
+  {
+    "id": 14,
+    "question": "Should paste functionality be permitted in password input fields?",
+    "source_page": 22,
+    "key_phrase": "paste",
+    "ground_truth_passage": "Verifiers SHOULD permit claimants to use 'paste' functionality when entering a memorized secret."
+  },
+  {
+    "id": 15,
+    "question": "Can biometrics be used as a standalone single-factor authenticator?",
+    "source_page": 28,
+    "key_phrase": "biometrics",
+    "ground_truth_passage": "Biometrics SHALL be used only as part of multi-factor authentication with a physical authenticator and SHALL NOT be used as a standalone single-factor authenticator."
+  }
+]

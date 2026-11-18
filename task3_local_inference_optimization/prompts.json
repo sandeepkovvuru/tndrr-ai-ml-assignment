@@ -1,0 +1,12 @@
+[
+  "Explain the difference between L1 and L2 regularization in 3 concise sentences.",
+  "Write a Python function to merge two sorted lists in O(n + m) time without using sorted().",
+  "What is the time and space complexity of Dijkstra's algorithm using a binary min-heap?",
+  "Convert the SQL query 'SELECT dept, COUNT(*) FROM emp GROUP BY dept HAVING COUNT(*) > 5' into pandas.",
+  "Summarize why cosine similarity is preferred over Euclidean distance for normalized text embeddings.",
+  "Debug this Python snippet: `def append_item(x, lst=[]): lst.append(x); return lst`.",
+  "Give 3 failure modes of naive fixed-size chunking in Retrieval-Augmented Generation.",
+  "Derive the gradient of binary cross-entropy loss with respect to logits z.",
+  "Compare TCP and UDP across reliability, ordering, and header overhead in a markdown table.",
+  "Write a strict JSON object representing a 3-step CI/CD pipeline for a FastAPI microservice."
+]

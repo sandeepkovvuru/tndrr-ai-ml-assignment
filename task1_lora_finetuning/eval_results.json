@@ -1,0 +1,85 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "hardware": "NVIDIA Tesla T4 (16 GB VRAM)",
+  "lora_config": {
+    "r": 16,
+    "lora_alpha": 32,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "learning_rate": 0.0002,
+    "epochs": 3
+  },
+  "base": {
+    "total_examples": 60,
+    "schema_valid_json_pct": 0.0,
+    "exact_json_match_pct": 0.0,
+    "field_level_accuracy_pct": 0.0
+  },
+  "fine_tuned": {
+    "total_examples": 60,
+    "schema_valid_json_pct": 100.0,
+    "exact_json_match_pct": 96.67,
+    "field_level_accuracy_pct": 98.81,
+    "failures": [
+      {
+        "input": "Push the Q4 Budget Review with Neha and Vikram to 2026-11-28 at half past two in the afternoon for an hour and a half, urgent!",
+        "expected": {
+          "intent": "reschedule_event",
+          "title": "Q4 Budget Review",
+          "date": "2026-11-28",
+          "time": "14:30",
+          "duration_mins": 90,
+          "participants": [
+            "Neha",
+            "Vikram"
+          ],
+          "priority": "high"
+        },
+        "predicted": {
+          "intent": "create_event",
+          "title": "Q4 Budget Review",
+          "date": "2026-11-28",
+          "time": "half past two in the afternoon",
+          "duration_mins": 1500,
+          "participants": [
+            "Neha",
+            "Vikram"
+          ],
+          "priority": "urgent"
+        }
+      },
+      {
+        "input": "Cancel tomorrow's Sprint Planning with Aarav on 2026-11-20 at 10:00 (30m) low priority.",
+        "expected": {
+          "intent": "cancel_event",
+          "title": "Sprint Planning",
+          "date": "2026-11-20",
+          "time": "10:00",
+          "duration_mins": 30,
+          "participants": [
+            "Aarav"
+          ],
+          "priority": "low"
+        },
+        "predicted": {
+          "intent": "reschedule_event",
+          "title": "Sprint Planning",
+          "date": "2026-11-20",
+          "time": "10:00",
+          "duration_mins": 30,
+          "participants": [
+            "Aarav"
+          ],
+          "priority": "low"
+        }
+      }
+    ]
+  }
+}

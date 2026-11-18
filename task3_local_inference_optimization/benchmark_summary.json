@@ -1,0 +1,15 @@
+{
+  "hardware": "NVIDIA Tesla T4 (15,360 MiB VRAM)",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+  "context_window": 2048,
+  "FP16_16bit": {
+    "weights_file": "qwen2.5-1.5b-instruct-fp16.gguf",
+    "vram_used_mb": 3316.0,
+    "avg_tokens_per_sec": 59.16
+  },
+  "Q4_K_M_4bit": {
+    "weights_file": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+    "vram_used_mb": 1306.0,
+    "avg_tokens_per_sec": 124.5
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "document": "NIST SP 800-63B Digital Identity Guidelines (80 extracted PDF pages)",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "index_type": "faiss.IndexFlatIP (exact cosine similarity)",
+  "chunk_150w": {
+    "num_chunks": 253,
+    "recall@5_pct": 80.0,
+    "mrr@5": 0.5489,
+    "hits": "12/15",
+    "missed": [
+      {
+        "id": 3,
+        "question": "Why does NIST SP 800-63B prohibit periodic arbitrary password expiration rules?",
+        "top1": "NIST SP 800-63B DIGITAL IDENTITY GUIDELINES: AUTHENTICATION & LIFECYCLE MANAGEMENT 67 This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-63b Appendix A\u2014Strength of "
+      },
+      {
+        "id": 6,
+        "question": "What is the maximum allowed lifetime for an out-of-band authentication secret?",
+        "top1": "4.2.3 Reauthentication Periodic reauthentication of subscriber sessions SHALL be performed as described in Section 7.2. At AAL2, authentication of the subscriber SHALL be repeated at least once per 1"
+      },
+      {
+        "id": 11,
+        "question": "What is the maximum number of consecutive failed authentication attempts before rate-limiting?",
+        "top1": "Limiting (Throttling) When required by the authenticator type descriptions in Section 5.1, the verifier SHALL implement controls to protect against online guessing attacks. Unless otherwise specified "
+      }
+    ]
+  },
+  "chunk_400w": {
+    "num_chunks": 129,
+    "recall@5_pct": 66.67,
+    "mrr@5": 0.5022,
+    "hits": "10/15"
+  }
+}
